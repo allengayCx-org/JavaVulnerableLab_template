@@ -33,8 +33,10 @@ jobs:
         run: ./cx scan create -s . `
           --project-name ${{ github.repository }} `
           --branch "$(echo ${{ github.head_ref || github.ref }} | sed -e "s#refs/heads/##g")" `
-          --base-uri ${{ secrets.CX_BASE_URI }} `
-          --tenant ${{ secrets.CX_TENANT }} `
-          --client-id ${{ secrets.CX_CLIENT_ID }} `
-          --client-secret ${{ secrets.CX_CLIENT_SECRET }} `
-          ${{ secrets.CX_ADDITIONAL_PARAMS }}
+          --cx_apikey ${{ secrets.API_KEY }} `
+         
+         # --base-uri ${{ secrets.CX_BASE_URI }} `
+         # --tenant ${{ secrets.CX_TENANT }} `
+         # --client-id ${{ secrets.CX_CLIENT_ID }} `
+         # --client-secret ${{ secrets.CX_CLIENT_SECRET }} `
+         # ${{ secrets.CX_ADDITIONAL_PARAMS }}
