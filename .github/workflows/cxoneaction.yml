@@ -34,6 +34,7 @@ jobs:
           --project-name ${{ github.repository }} `
           --branch "$(echo ${{ github.head_ref || github.ref }} | sed -e "s#refs/heads/##g")" `
           --cx_apikey ${{ secrets.API_KEY }} `
+         # additionalParams: '--threshold sast-high=100 --project-name allengayCx.webgoat.projectNameFromYML --project-tags id:tagFromYML'
          
          # --base-uri ${{ secrets.CX_BASE_URI }} `
          # --tenant ${{ secrets.CX_TENANT }} `
